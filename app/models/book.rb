@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  scope :finished, -> {where(Book.finished_at != nil}
+  scope :finished, -> {where(:finished_at => !nil)}
   def index
      books = Book.all
      if rating = params[:rating]
