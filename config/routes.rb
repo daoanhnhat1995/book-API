@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   namespace :api do 
     resources :books
+    resources :finished_books
   end
   with_options except: [:create,:update,:destroy] do |read_only|
     read_only.resources :author
