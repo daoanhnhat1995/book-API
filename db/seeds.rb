@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Book.create(title: 'Introduction to Computer Science', rating:5)
-Book.create(title: 'Rspec with codeschool', rating:2)
+Book.create(title: 'Introduction to Computer Science', rating:5, finished_at:nil)
+Book.create(title: 'Rspec with codeschool', rating:2,finished_at:5.days.ago)
 
 
