@@ -19,7 +19,11 @@ module Api
         render json: book.errors, status: 422
       end
     end
-
+    def destroy
+        book = Book.find(params[:id])
+        book.destroy!
+        head 204
+    end
     private
       def book_params
         params.require(:book).permit(:title,:rating)

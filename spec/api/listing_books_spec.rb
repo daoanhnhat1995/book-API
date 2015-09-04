@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "books API",:type => :request do
-  describe "GET /movies" do
+  context "GET /movies" do
     before do 
       Book.create!(title: "Titanic",rating:5)
       Book.create!(title: "Rspec",rating:3)
@@ -25,4 +25,5 @@ RSpec.describe "books API",:type => :request do
       expect(body.size).to eq(2)
     end
   end
+
 end
