@@ -3,7 +3,7 @@ module Api
   class BooksController < ApplicationController
 
     def index
-      books = Book.all
+      books = Book.available
       if rating = params[:rating]
         books = books.where(rating: rating)
       end
@@ -21,7 +21,7 @@ module Api
     end
     def destroy
         book = Book.find(params[:id])
-        book.destroy!
+        book.archive
         head 204
     end
     private
